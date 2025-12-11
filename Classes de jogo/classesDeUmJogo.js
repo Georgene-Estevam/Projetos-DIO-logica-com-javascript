@@ -20,25 +20,39 @@ tenisCorrida.listarProduto()
 
 //Criando a classe do herói
 class heroi {
-    constructor(nome, idade, classeHeroi, ataqueHeroi, nivelHeroi){
+    constructor(nome, idade, classeHeroi, nivelHeroi){
         this.nome = nome
         this.idade = idade
         this.classeHeroi = classeHeroi
-        this.ataqueHeroi = ataqueHeroi
+        //this.ataqueHeroi = ataqueHeroi
         this.nivelHeroi = nivelHeroi
     }
 
     personagemHeroi(){
-        console.log(`O ${this.classeHeroi} atacou usando ${this.ataqueHeroi}`)
         console.log(`
         Nome: ${this.nome}
         Idade: ${this.idade}
         Classe: ${this.classeHeroi}
-        Arma: ${this.ataqueHeroi}
         Nível: ${this.nivelHeroi}
         `)
     }
 }
+// Criando método e usando sintaxe tradicional
+const atacar = {
+    ataqueHeroi: "Magia"
+}
 
-let personagem = new heroi("Georgene", 29, "ninja", "shuriken", 30000)
+// Verificação para identificar o tipo de ataque do herói
+if (atacar.ataqueHeroi === "shuriken") {
+    this.classeHeroi = "ninja"
+} else if (atacar.ataqueHeroi === "magia") {
+    this.classeHeroi = "mago"
+} else if (atacar.ataqueHeroi === "espada") {
+    this.classeHeroi = "guerreiro"
+} else if (atacar.ataqueHeroi === "artes marciais") {
+    this.classeHeroi = "monge"
+}
+
+let personagem = new heroi("Georgene", 29, "monge", 30000)
+console.log(`O ${this.classeHeroi} atacou usando ${atacar.ataqueHeroi}`)
 personagem.personagemHeroi()
